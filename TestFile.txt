@@ -11,5 +11,5 @@ Version 1.0 : File creation (by Marko Tomislav Babic)
 Version 1.1 : Edit (by Marko Babic from private gitHub acct)
 Version 1.2 : Added comments to file to make intent more clear (by Michael Shirt)
 Version 1.3 : Apologies. I already edited it, but it was essentially invisible just to be put on the contributors list. -Thomas
-
+Version 1.4 : Hmmmm, can't find the 'Settings' area to make myself a collaborator, so this is a fork that I'll try to commit 
 
