@@ -1,5 +1,14 @@
+// This file will be used to satisfy the requirements of Project Part 1
+//
+// Below is the dummy text originally used to fill the blank file
+
 classproject
+
+// The Version numbers, showing the changes made to the file by
+// the members of the group
 ============
 Version 1.0 : File creation (by Marko Tomislav Babic)
 Version 1.1 : Edit (by Marko Babic from private gitHub acct)
+Version 1.2 : Added comments to file to make intent more clear (by Michael Shirt)
+
 
