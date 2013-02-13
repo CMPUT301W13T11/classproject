@@ -1,0 +1,67 @@
+Main Screen:
+-My recipes
+-Search for recipes
+-My ingredients
+
+My Recipes:
+(Lists cached recipes)
+-Add new recipe
+-View recipe
+-Go back to main
+
+View Recipe:
+-Edit Recipe
+-View Photos
+-Publish recipe
+-Go back to My Recipes
+
+View Photos:
+-View Photo
+-Slideshow
+
+Edit Recipe:
+-Edit ingredients
+-Edit Photos
+-Edit instructions
+-Go back to view Recipe
+
+Edit Photos:
+-Take Photo
+-Delete Photo
+-View Photo
+-Slideshow
+-Go back to Edit Recipe
+
+Add new Recipe:
+-Add Recipe Name
+-Add ingredients
+-Add Photos
+-Add instructions
+-Go back to view Recipe
+
+My ingredients:
+(Lists ingredients)
+-Add Ingredient
+-Modify Ingredient
+-Remove Ingredient
+-Go back to main
+
+Search:
+-Search based on ingredients
+-Keyword search
+-Go back to main
+
+Search results:
+(lists returned recipes)
+-Go back to search
+
+View Recipe 2:
+-Add Photo
+-Download recipe
+-Look at Photos
+-Go back to My Recipes
+
+Take Photo:
+-Take Photo
+-Save Photo
+-Go back to Parent
