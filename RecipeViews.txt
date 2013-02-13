@@ -13,6 +13,7 @@ View Recipe:
 -Edit Recipe
 -View Photos
 -Publish recipe
+-Email recipe
 -Go back to My Recipes
 
 View Photos:
