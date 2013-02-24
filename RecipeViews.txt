@@ -18,7 +18,7 @@ View Recipe:
 
 View Photos:
 -View Photo
--Slideshow
+-Slideshow(optional)
 
 Edit Recipe:
 -Edit ingredients
@@ -29,8 +29,7 @@ Edit Recipe:
 Edit Photos:
 -Take Photo
 -Delete Photo
--View Photo
--Slideshow
+-View Photos
 -Go back to Edit Recipe
 
 Add new Recipe:
