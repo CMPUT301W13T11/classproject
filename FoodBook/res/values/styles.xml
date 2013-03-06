@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
@@ -17,4 +17,17 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
+    <style name="styleName" parent="android:Widget.Holo.Light.Button">
+        <item name="android:layout_marginLeft">17dp</item>
+    </style>
+    
+    <style name="Button1">
+    	<item name="android:textColor">#ffffffff</item>
+    	<item name="android:textSize">24sp</item>
+    	<item name="android:shadowColor">#000000</item>
+    	<item name="android:shadowDx">1</item>
+    	<item name="android:shadowDy">1</item>
+    	<item name="android:shadowRadius">1</item>
+    	<item name="android:background">@drawable/button_style1</item>
+  </style>
 </resources>
