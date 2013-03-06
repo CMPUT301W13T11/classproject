@@ -1,8 +1,7 @@
 
-
 public class DbManager<V implements FView> implements FModel<V implements FView> {
   
-  private Collection<V view> views;
+  private Collection<V> views;
 
   // implement FModel methods
   public void addView(V view) {
