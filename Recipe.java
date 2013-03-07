@@ -10,7 +10,7 @@ import java.util.Collection;
  */
 public class Recipe {
 	private User author;
-	private String name;
+	private String title;
 	private String instructions;
 	private ArrayList<Ingredient> ingredients;
 	private String uri;
@@ -19,12 +19,12 @@ public class Recipe {
 	
 	/**
 	 * Constructor.
-	 * @param name The name of the recipe.
+	 * @param title The title of the recipe.
 	 */
-	public Recipe(User author, String name)
+	public Recipe(User author, String title)
 	{
 		this.author = author;
-		this.name = name;
+		this.title = title;
 		this.instructions = "";
 		this.ingredients = new ArrayList<Ingredient>();
 		/* TODO: find a good hashing function in order to assign to each recipe a unique URI
@@ -34,13 +34,13 @@ public class Recipe {
 	
 	/**
 	 * Constructor.
-	 * @param name The name of the recipe.
-	 * @param instructions
+	 * @param title The title of the recipe.
+	 * @param instructions The set of instructions for executing the recipe.
 	 */
-	public Recipe(User author, String name, String instructions)
+	public Recipe(User author, String title, String instructions)
 	{
 		this.author = author;
-		this.name = name;
+		this.title = title;
 		this.instructions = instructions;
 		this.ingredients = new ArrayList<Ingredient>();
 		/* TODO: find a good hashing function in order to assign to each recipe a unique URI
@@ -51,14 +51,14 @@ public class Recipe {
 	
 	/**
 	 *  Constructor.
-	 * @param name
-	 * @param instructions
-	 * @param ingredients
+	 * @param title The title of the recipe.
+	 * @param instructions The set of instructions used to execute the recipe.
+	 * @param ingredients The list of ingredients associated with this recipe.
 	 */
-	public Recipe(User author, String name, String instructions, ArrayList<Ingredient> ingredients)
+	public Recipe(User author, String title, String instructions, ArrayList<Ingredient> ingredients)
 	{
 		this.author = author;
-		this.name = name;
+		this.title = title;
 		this.instructions = instructions;
 		this.ingredients = ingredients;
 		/* TODO: find a good hashing function in order to assign to each recipe a unique URI
