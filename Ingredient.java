@@ -1,4 +1,4 @@
-package ca.ualberta.cmput313w13t11.FoodBank.model;
+package ca.ualberta.cmput301w13t11.FoodBank.model;
 
 /**
  * Class which models an ingredient object. (TODO: better class description)
