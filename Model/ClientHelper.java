@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.entity.StringEntity;
@@ -50,22 +51,34 @@ public class ClientHelper {
 		
 	}
 	
-	public Recipe to(HttpResponse response) throws IOException
+	/**
+	 * After executing a search on the server, this method is called to 
+	 * transform the search results into a list of recipes.
+	 * @param response
+	 * @return
+	 * @throws IOException
+	 */
+	public ArrayList<Recipe> toRecipeList(HttpResponse response) throws IOException
 	{
 		//TODO : conversion type wrong, needs to be a server response from which
 		// serverrecipes can be extracted -- need to put more thought/research into this
 		BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
 		String out, json = "";
-		ServerRecipe sr;
-		Recipe ret_value = new Recipe(new User("fake"), "");
-		Type serverRecipeType = new TypeToken<ServerRecipe>(){}.getType();
+		ServerSearchResponse<ServerRecipe> search_response;
+		ArrayList<Recipe> search_results = new ArrayList<Recipe>();
 		
 		while ((out = br.readLine()) != null) {
 			json += out;
 		}
 		
-		sr = gson.fromJson(json, serverRecipeType);
-		return ret_value;
+		Type serverSearchResponseType = new TypeToken<ServerSearchResponse<ServerRecipe>>(){}.getType();
+		search_response = gson.fromJson(json, serverSearchResponseType);
+		
+		for (ServerResponse<ServerRecipe> sr : search_response.getHits())
+		{
+			ServerRecipe server_recipe = sr.getSource();
+		}
+		return search_results;
 	}
 
 }
