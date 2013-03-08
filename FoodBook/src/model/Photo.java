@@ -50,4 +50,12 @@ public class Photo {
 	{
 		return BitmapFactory.decodeByteArray(bit_data, 0, bit_data.length);
 	}
+
+	public byte[] getBitData()
+	{
+		return bit_data;
+	}
+	public String getName() {
+		return name;
+	}
 }

@@ -24,9 +24,9 @@ public class Recipe {
 	 */
 	public Recipe(User author, String title)
 	{
-		this.author = author;
+		this.setAuthor(author);
 		this.title = title;
-		this.instructions = "";
+		this.setInstructions("");
 		this.ingredients = new ArrayList<Ingredient>();
 		this.photos = new ArrayList<Photo>();
 		/* TODO: find a good hashing function in order to assign to each recipe a unique URI
@@ -41,12 +41,11 @@ public class Recipe {
 	 */
 	public Recipe(User author, String title, String instructions)
 	{
-		this.author = author;
+		this.setAuthor(author);
 		this.title = title;
-		this.instructions = instructions;
+		this.setInstructions(instructions);
 		this.ingredients = new ArrayList<Ingredient>();
 		this.photos = new ArrayList<Photo>();
-
 		/* TODO: find a good hashing function in order to assign to each recipe a unique URI
 		* such that duplicates cannot be misinterpreted for one another on the server. */
 		this.uri = "";
@@ -61,9 +60,9 @@ public class Recipe {
 	 */
 	public Recipe(User author, String title, String instructions, ArrayList<Ingredient> ingredients)
 	{
-		this.author = author;
+		this.setAuthor(author);
 		this.title = title;
-		this.instructions = instructions;
+		this.setInstructions(instructions);
 		this.ingredients = ingredients;
 		this.photos = new ArrayList<Photo>();
 
@@ -75,9 +74,9 @@ public class Recipe {
 	public Recipe(User author, String title, String instructions, ArrayList<Ingredient> ingredients,
 				ArrayList<Photo> photos)
 	{
-		this.author = author;
+		this.setAuthor(author);
 		this.title = title;
-		this.instructions = instructions;
+		this.setInstructions(instructions);
 		this.ingredients = ingredients;
 		this.photos = photos;
 
@@ -85,6 +84,57 @@ public class Recipe {
 		* such that duplicates cannot be misinterpreted for one another on the server. */
 		this.uri = "";
 	}
-	//TODO add getters/setter
+
+	public String getTitle()
+	{
+		return this.title;
+	}
+
+	public User getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(User author) {
+		this.author = author;
+	}
+
+	public String getInstructions() {
+		return instructions;
+	}
+
+	public void setInstructions(String instructions) {
+		this.instructions = instructions;
+	}
+
+	public ArrayList<Ingredient> getIngredients() {
+		return ingredients;
+	}
+
+	public void setIngredients(ArrayList<Ingredient> ingredients) {
+		this.ingredients = ingredients;
+	}
+
+	public ArrayList<Photo> getPhotos() {
+		return photos;
+	}
+
+	public void addPhoto(Photo photo)
+	{
+		photos.add(photo);
+	}
 	
+	public void deletePhoto(Photo photo)
+	{
+		for(Photo p : photos) {
+			if (p.getName() == photo.getName())
+			{
+				photos.remove(p);
+			}
+		}
+	}
+
+	public String getUri() {
+		return uri;
+	}
+
 }
