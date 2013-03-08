@@ -22,6 +22,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.team11.foodbook.MyRecipes"
+            android:label="@string/title_activity_my_recipes" >
+        </activity>
+        <activity
+            android:name="com.team11.foodbook.MyIngredients"
+            android:label="@string/title_activity_my_ingredients" >
+        </activity>
+        <activity
+            android:name="com.team11.foodbook.SearchActivity"
+            android:label="@string/title_activity_search" >
+        </activity>
     </application>
 
 </manifest>

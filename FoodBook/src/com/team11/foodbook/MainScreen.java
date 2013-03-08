@@ -2,7 +2,9 @@ package com.team11.foodbook;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
 
 public class MainScreen extends Activity {
 
@@ -19,4 +21,20 @@ public class MainScreen extends Activity {
         return true;
     }
     
+    /** Called when the user clicks the My Recipes button */
+	public void GoToMyRecipes(View view) {
+		Intent intent = new Intent(this, MyRecipes.class);
+		startActivity(intent);
+	}
+	
+	/** Called when the user clicks the My Ingredients button */
+	public void GoToMyIngredients(View view) {
+		Intent intent = new Intent(this, MyIngredients.class);
+		startActivity(intent);
+	}
+	/** Called when the user clicks the Search button */
+	public void GoToSearch(View view) {
+		Intent intent = new Intent(this, SearchActivity.class);
+		startActivity(intent);
+	}
 }
