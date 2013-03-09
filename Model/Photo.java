@@ -20,6 +20,18 @@ public class Photo {
 	private String name;
 	private byte[] bit_data;
 	
+	
+	/**
+	 * Construct photo from given name and byte array.
+	 * @param name
+	 * @param data
+	 */
+	public Photo(String name, byte[] data)
+	{
+		this.name = name;
+		this.bit_data = data;
+	}
+	
 	/**
 	 * Create a photo from the given bitmap (we first compress the data to make sure
 	 * we aren't storing/downloading/uploading huge files).

@@ -36,6 +36,95 @@ public class ServerRecipe{
 		}
 	}
 	
-	//TODO: convert server recipe to regular recipe method (easy)
 
+	public static Recipe toRecipe(ServerRecipe sr)
+	{
+		Recipe ret = new Recipe(sr.getAuthor(), sr.getTitle(), sr.getInstructions(),
+								sr.getIngredients());
+		for (ServerPhoto sp : sr.photos) {
+			ret.addPhoto(ServerPhoto.toPhoto(sp));
+		}
+		
+		return ret;
+	}
+
+
+	public ArrayList<ServerPhoto> getPhotos()
+	{
+		return photos;
+	}
+	
+	
+	public User getAuthor() {
+		return author;
+	}
+
+
+	public void setAuthor(User author) {
+		this.author = author;
+	}
+
+
+	/**
+	 * @return the title
+	 */
+	public String getTitle() {
+		return title;
+	}
+
+
+	/**
+	 * @param title the title to set
+	 */
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+
+	/**
+	 * @return the instructions
+	 */
+	public String getInstructions() {
+		return instructions;
+	}
+
+
+	/**
+	 * @param instructions the instructions to set
+	 */
+	public void setInstructions(String instructions) {
+		this.instructions = instructions;
+	}
+
+
+	/**
+	 * @return the ingredients
+	 */
+	public ArrayList<Ingredient> getIngredients() {
+		return ingredients;
+	}
+
+
+	/**
+	 * @param ingredients the ingredients to set
+	 */
+	public void setIngredients(ArrayList<Ingredient> ingredients) {
+		this.ingredients = ingredients;
+	}
+
+
+	/**
+	 * @return the uri
+	 */
+	public String getUri() {
+		return uri;
+	}
+
+
+	/**
+	 * @param uri the uri to set
+	 */
+	public void setUri(String uri) {
+		this.uri = uri;
+	}
 }

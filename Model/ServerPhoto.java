@@ -18,6 +18,12 @@ public class ServerPhoto {
 		this.encoded_bitmap = new String(Base64.encode(photo.getBitData(), Base64.DEFAULT));
 	}
 
+	public static Photo toPhoto(ServerPhoto sp)
+	{
+		byte[] data = Base64.decode(sp.encoded_bitmap, Base64.DEFAULT);
+		return new Photo(sp.getName(), data);
+	}
+	
 	public String getName() {
 		return name;
 	}

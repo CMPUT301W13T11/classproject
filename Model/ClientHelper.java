@@ -30,6 +30,7 @@ public class ClientHelper {
 	{
 	}
 	
+
 	/**
 	 * Converts the given recipe to a JSON object (this includes 
 	 * re-encoding photos).
@@ -60,8 +61,7 @@ public class ClientHelper {
 	 */
 	public ArrayList<Recipe> toRecipeList(HttpResponse response) throws IOException
 	{
-		//TODO : conversion type wrong, needs to be a server response from which
-		// serverrecipes can be extracted -- need to put more thought/research into this
+
 		BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
 		String out, json = "";
 		ServerSearchResponse<ServerRecipe> search_response;
@@ -77,6 +77,7 @@ public class ClientHelper {
 		for (ServerResponse<ServerRecipe> sr : search_response.getHits())
 		{
 			ServerRecipe server_recipe = sr.getSource();
+			search_results.add(ServerRecipe.toRecipe(server_recipe));
 		}
 		return search_results;
 	}
