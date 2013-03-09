@@ -34,6 +34,42 @@
             android:name="com.team11.foodbook.SearchActivity"
             android:label="@string/title_activity_search" >
         </activity>
+        <activity
+            android:name="com.team11.foodbook.AddRecipesActivity"
+            android:label="@string/title_activity_add_recipes" >
+        </activity>
+        <activity
+            android:name="com.team11.foodbook.EditRecipeActivity"
+            android:label="@string/title_activity_edit_recipe" >
+        </activity>
+        <activity
+            android:name="com.team11.foodbook.ViewSearchResultActivity"
+            android:label="@string/title_activity_view_search_result" >
+        </activity>
+        <activity
+            android:name="com.team11.foodbook.ViewRecipeActivity"
+            android:label="@string/title_activity_view_recipe" >
+        </activity>
+        <activity
+            android:name="com.team11.foodbook.SearchResultsActivity"
+            android:label="@string/title_activity_search_results" >
+        </activity>
+        <activity
+            android:name="com.team11.foodbook.ViewPhotosActivity"
+            android:label="@string/title_activity_view_photos" >
+        </activity>
+        <activity
+            android:name="com.team11.foodbook.Edit"
+            android:label="@string/title_activity_edit" >
+        </activity>
+        <activity
+            android:name="com.team11.foodbook.EditPhotos"
+            android:label="@string/title_activity_edit_photos" >
+        </activity>
+        <activity
+            android:name="com.team11.foodbook.TakePhotosActivity"
+            android:label="@string/title_activity_take_photos" >
+        </activity>
     </application>
 
 </manifest>

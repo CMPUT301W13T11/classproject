@@ -7,6 +7,8 @@
 
 package com.team11.foodbook;
 
+import android.view.View;
+
 public final class R {
     public static final class attr {
     }
@@ -38,12 +40,15 @@ public final class R {
         public static final int activity_my_ingredients=0x7f030001;
         public static final int activity_my_recipes=0x7f030002;
         public static final int activity_search=0x7f030003;
+		public static View activity_add_recipes;
+		public static View activity_edit_recipe;
     }
     public static final class menu {
         public static final int activity_main_screen=0x7f070000;
         public static final int activity_my_ingredients=0x7f070001;
         public static final int activity_my_recipes=0x7f070002;
         public static final int activity_search=0x7f070003;
+		public static int edit_recipe;
     }
     public static final class string {
         public static final int app_name=0x7f040000;

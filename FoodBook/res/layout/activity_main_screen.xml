@@ -6,14 +6,18 @@
     tools:context=".MainScreen" 
     android:background="@color/grey">
 
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/FoodBookTitle1" />
+
     <Button
         android:id="@+id/button1"
         style="@style/Button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="86dp"
         android:onClick="GoToMyIngredients"
         android:text="@string/my_ingredients"
         android:textSize="20sp" />
@@ -23,8 +27,6 @@
         style="@style/Button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
         android:onClick="GoToMyRecipes"
         android:text="@string/my_recipes"
@@ -35,18 +37,10 @@
         style="@style/SearchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button1"
+        android:layout_below="@+id/imageView1"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="14dp"
         android:fitsSystemWindows="false"
         android:text="@string/search"
         android:textSize="30sp" />
-
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:src="@drawable/FoodBookTitle1" />
 
 </RelativeLayout>
